@@ -1,0 +1,22 @@
+## ERRORS (must fix): 0
+
+## WARNINGS (should fix or justify): 0
+
+## INFO: 1
+- audio sync: 144/144 notes (100%) sit within 45 ms of a detected onset
+
+## STATS
+- notes: 144
+- fake: 0
+- by_type: {'tap': 129, 'drag': 8, 'flick': 7}
+- duration_s: 34.8
+- avg_nps: 4.14
+- peak_nps_1s: 7
+- peak_at_beat: 3.5
+- lead_time_s: {'min': 0.83, 'median': 0.96, 'max': 1.08}
+- sync_ratio: 1.0
+- lines: 1
+- per section:
+  - sec 0 [A] beats 0-64: 101 notes, 3.81 nps
+  - sec 1 [B] beats 64-88: 43 notes, 4.33 nps
+

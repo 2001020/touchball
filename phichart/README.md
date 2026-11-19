@@ -66,3 +66,8 @@ phichart make song.mp3 --out work/song --backend manual             # 只准备�
 
 `examples/itty_bitty/`：用 Kevin MacLeod《Itty Bitty 8 Bit》前 97 秒（incompetech.com，CC BY 4.0）按 GUIDE 流程完成的谱面，
 含最终 `chart.json`、`PLAN.md`（规划与审阅日志）、各段片段文件和若干渲染图。音频不随仓库分发。
+
+`examples/polka_autonomous/`：**完全无人干预**的端到端运行结果——
+`phichart make polka_cut.mp3 --out work/polka`（Kevin MacLeod《Pixel Peeker Polka - faster》前 36 秒，CC BY 4.0），
+后端为 Claude Code 无头模式：45 轮工具调用，16 次查看渲染图（timeline / 真引擎 snap / --compare），
+产出 144 个音符，lint 0 错误 0 警告，同步率 100%，花费约 1.5 美元。`PLAN.md` 是模型自己写的规划与审阅日志，`make_console.log` 是控制台记录。
