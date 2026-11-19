@@ -1,0 +1,54 @@
+[
+ {"startTime":"64+1/2","positionX":200},{"startTime":"65+1/4","positionX":-250},{"startTime":"65+3/4","positionX":-100},{"startTime":66,"positionX":250},
+ {"startTime":"66+1/2","positionX":120},{"startTime":"66+3/4","positionX":-250},{"startTime":67,"positionX":250},{"startTime":"67+1/2","positionX":-150},
+
+ {"startTime":68,"positionX":-300},{"startTime":68,"positionX":300},
+ {"startTime":"68+3/4","positionX":-200},{"startTime":69,"positionX":200},{"startTime":"69+1/2","positionX":350},{"startTime":"70+1/2","positionX":150},
+ {"startTime":"70+3/4","positionX":-250},{"startTime":71,"positionX":250},{"startTime":"71+1/2","positionX":-100},
+
+ {"startTime":72,"positionX":-300},{"startTime":"72+3/4","positionX":200},{"startTime":"73+1/4","positionX":-200},{"startTime":"73+3/4","positionX":300},
+ {"type":"hold","startTime":"74+1/4","endTime":75,"positionX":-250},
+ {"type":"drag","startTime":"74+1/2","positionX":150},{"startTime":"74+3/4","positionX":300},{"startTime":"75+1/2","positionX":-150},
+
+ {"startTime":76,"positionX":250},{"startTime":"76+3/4","positionX":-250},{"startTime":77,"positionX":200},{"startTime":78,"positionX":300},
+ {"type":"hold","startTime":"78+1/3","endTime":79,"positionX":-200},
+ {"startTime":"78+3/4","positionX":150},{"startTime":79,"positionX":350},{"startTime":"79+1/2","positionX":-150},
+
+ {"startTime":"80+1/2","positionX":200},{"startTime":"80+3/4","positionX":-200},{"startTime":"81+1/4","positionX":-350},{"startTime":"81+3/4","positionX":250},
+ {"startTime":"82+3/4","positionX":-250},{"startTime":83,"positionX":250},{"startTime":"83+1/2","positionX":-100},
+
+ {"startTime":84,"positionX":-300},{"startTime":84,"positionX":300},
+ {"startTime":"84+3/4","positionX":-150},{"startTime":85,"positionX":150},{"startTime":"85+1/2","positionX":350},
+ {"startTime":"86+3/4","positionX":-250},{"startTime":87,"positionX":250},{"startTime":"87+1/2","positionX":-100},
+
+ {"startTime":"88+1/4","positionX":200},{"startTime":"88+3/4","positionX":-250},{"startTime":"89+1/4","positionX":-50},{"startTime":"89+3/4","positionX":300},
+ {"startTime":"90+3/4","positionX":-200},{"startTime":91,"positionX":200},{"startTime":"91+1/2","positionX":-100},
+
+ {"startTime":92,"positionX":250},{"startTime":"92+3/4","positionX":-250},{"startTime":93,"positionX":150},{"type":"drag","startTime":"93+3/4","positionX":300},
+ {"startTime":"94+1/2","positionX":-200},{"startTime":95,"positionX":250},{"startTime":"95+1/2","positionX":-150},
+
+ {"startTime":"96+1/2","positionX":250},{"startTime":"96+3/4","positionX":-250},{"startTime":"97+1/4","positionX":-100},{"startTime":"97+3/4","positionX":200},
+ {"startTime":98,"positionX":350},{"startTime":"98+3/4","positionX":-250},{"startTime":99,"positionX":250},{"startTime":"99+1/2","positionX":-150},
+
+ {"startTime":"100+3/4","positionX":-300},{"startTime":"100+3/4","positionX":300},
+ {"type":"drag","startTime":101,"positionX":150},{"startTime":102,"positionX":300},{"startTime":"102+3/4","positionX":-250},{"startTime":103,"positionX":200},{"startTime":"103+1/2","positionX":-150},
+
+ {"startTime":104,"positionX":-300},{"startTime":"104+3/4","positionX":-100},{"startTime":"105+1/4","positionX":150},{"startTime":"105+3/4","positionX":350},
+ {"startTime":"106+3/4","positionX":-250},{"startTime":107,"positionX":250},{"startTime":"107+1/2","positionX":-100},
+
+ {"startTime":108,"positionX":250},{"startTime":"108+3/4","positionX":-250},{"startTime":109,"positionX":150},{"startTime":110,"positionX":300},
+ {"startTime":"110+3/4","positionX":-200},{"startTime":111,"positionX":200},{"startTime":"111+1/2","positionX":-100},
+
+ {"startTime":"112+1/2","positionX":250},{"startTime":"113+1/4","positionX":-250},{"startTime":"113+3/4","positionX":-50},{"startTime":114,"positionX":250},
+ {"startTime":"114+3/4","positionX":-250},{"startTime":115,"positionX":200},{"startTime":"115+1/2","positionX":-100},
+
+ {"startTime":116,"positionX":-300},{"startTime":116,"positionX":300},
+ {"startTime":"116+3/4","positionX":-150},{"startTime":117,"positionX":150},{"startTime":118,"positionX":300},
+ {"startTime":"118+3/4","positionX":-250},{"startTime":119,"positionX":250},{"startTime":"119+1/2","positionX":-100},
+
+ {"startTime":120,"positionX":-300},{"startTime":"120+3/4","positionX":-100},{"startTime":"121+3/4","positionX":300},
+ {"startTime":"122+3/4","positionX":-250},{"startTime":123,"positionX":200},{"startTime":"123+1/2","positionX":-150},
+
+ {"startTime":124,"positionX":250},{"startTime":"124+3/4","positionX":-250},{"startTime":125,"positionX":150},{"startTime":126,"positionX":300},
+ {"type":"drag","startTime":"126+1/2","positionX":150},{"startTime":"126+3/4","positionX":-250},{"startTime":127,"positionX":250},{"type":"flick","startTime":"127+1/2","positionX":-150}
+]

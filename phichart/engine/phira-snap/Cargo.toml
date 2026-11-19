@@ -1,0 +1,18 @@
+[package]
+name = "phira-snap"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+# Headless frame renderer built on Phira's own engine (prpr).
+# scripts/setup.sh copies this crate into <phira>/tools/phira-snap so it builds
+# inside the Phira workspace and links against the unmodified prpr crate.
+
+[dependencies]
+anyhow = { workspace = true }
+image = { workspace = true, features = ["png"] }
+macroquad = { workspace = true, default-features = false }
+prpr = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread"] }

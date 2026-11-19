@@ -1,0 +1,29 @@
+[
+ {"startTime":2,"positionX":0},{"startTime":"2+1/2","positionX":250},{"startTime":"2+3/4","positionX":-250},{"startTime":3,"positionX":250},{"startTime":"3+1/2","positionX":-250},
+
+ {"startTime":4,"positionX":-300},{"startTime":4,"positionX":300},
+ {"startTime":"4+3/4","positionX":-200},{"startTime":5,"positionX":200},{"startTime":6,"positionX":120},{"startTime":"6+1/2","positionX":320},
+ {"startTime":"6+3/4","positionX":-250},{"startTime":7,"positionX":250},{"startTime":"7+1/2","positionX":-150},
+
+ {"startTime":"8+1/4","positionX":200},{"startTime":"8+3/4","positionX":-300},{"startTime":"9+1/4","positionX":-100},{"startTime":"9+3/4","positionX":250},
+ {"startTime":"10+1/2","positionX":150},{"startTime":"10+3/4","positionX":-250},{"startTime":11,"positionX":300},{"startTime":"11+1/2","positionX":-200},
+
+ {"startTime":12,"positionX":-300},{"startTime":"12+3/4","positionX":-100},{"startTime":13,"positionX":200},{"startTime":"13+3/4","positionX":350},
+ {"type":"hold","startTime":"14+1/4","endTime":15,"positionX":-250},
+ {"startTime":"14+1/2","positionX":250},{"startTime":"14+3/4","positionX":400},{"startTime":15,"positionX":200},{"startTime":"15+1/2","positionX":-200},
+
+ {"startTime":"16+1/2","positionX":250},{"startTime":"16+3/4","positionX":-250},{"startTime":"17+1/4","positionX":-100},{"startTime":"17+3/4","positionX":250},
+ {"startTime":"18+3/4","positionX":-250},{"startTime":19,"positionX":250},{"startTime":"19+1/2","positionX":-150},
+
+ {"startTime":20,"positionX":-300},{"startTime":20,"positionX":300},
+ {"startTime":"20+3/4","positionX":-150},{"startTime":21,"positionX":150},{"startTime":"22+1/2","positionX":300},{"startTime":"22+3/4","positionX":-300},
+ {"startTime":23,"positionX":200},{"startTime":"23+1/2","positionX":-200},{"type":"drag","startTime":"23+3/4","positionX":-100},
+
+ {"startTime":24,"positionX":250},{"startTime":"24+3/4","positionX":-250},{"startTime":"25+1/4","positionX":-50},{"startTime":"25+3/4","positionX":250},
+ {"startTime":"26+3/4","positionX":-250},{"startTime":27,"positionX":250},{"startTime":"27+1/2","positionX":-150},{"type":"drag","startTime":"27+3/4","positionX":-50},
+
+ {"startTime":28,"positionX":-200},{"type":"hold","startTime":"28+1/4","endTime":"29+1/2","positionX":300},
+ {"startTime":"28+3/4","positionX":-250},{"type":"drag","startTime":29,"positionX":-100},{"startTime":"29+3/4","positionX":250},
+ {"type":"hold","startTime":"30+1/4","endTime":"31+1/4","positionX":-250},
+ {"startTime":"30+3/4","positionX":200},{"startTime":31,"positionX":350},{"type":"flick","startTime":"31+1/2","positionX":150}
+]

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phichart"
+version = "0.1.0"
+description = "AI charting framework for Phira: audio analysis, RPE json authoring tools, real-engine previews"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy", "scipy", "librosa>=0.10", "soundfile", "pillow", "matplotlib",
+]
+
+[project.optional-dependencies]
+api = ["anthropic"]
+
+[project.scripts]
+phichart = "phichart.cli:main"
+
+[tool.setuptools]
+packages = ["phichart"]
