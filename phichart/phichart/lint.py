@@ -82,8 +82,11 @@ def lint(chart_in: dict, analysis: dict | None = None, level: str = "IN", max_it
     for a, b in zip(singles, singles[1:]):
         dt = b[0] - a[0]
         dx = abs(b[3]["positionX"] - a[3]["positionX"])
-        if a[2] == b[2] and dt < 0.13 and dx > 650 and not (a[3]["type"] == 4 or b[3]["type"] == 4):
-            warns.append(f"{where(a)} -> {where(b)}: {dx:.0f}px jump in {dt * 1000:.0f} ms (very hard)")
+        xa, xb = a[3]["positionX"], b[3]["positionX"]
+        # opposite sides = normal two-hand alternation; only flag travel that one hand has to make
+        same_hand = (xa > 0) == (xb > 0) or min(abs(xa), abs(xb)) < 100
+        if a[2] == b[2] and dt < 0.13 and same_hand and dx > 420 and not (a[3]["type"] == 4 or b[3]["type"] == 4):
+            warns.append(f"{where(a)} -> {where(b)}: {dx:.0f}px one-hand jump in {dt * 1000:.0f} ms (very hard)")
         if a[3]["type"] == 3 and dt < 0.12 and abs(b[3]["positionX"] - a[3]["positionX"]) < rpe.NOTE_WIDTH and b[3]["type"] != 4:
             warns.append(f"{where(a)}: flick followed {dt * 1000:.0f} ms later by a note at the same spot")
 

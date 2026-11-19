@@ -178,13 +178,15 @@ def cmd_onsets(a):
                 if o["s"] > r.get(k, {}).get("s", -1):
                     r[k] = o
     print(f"# onsets beats {fmt_beat(b0)}-{fmt_beat(b1)}, strength>={a.min}; format: beat | layer:strength(...) ; "
-          "'len' = sustain in beats (hold candidate if >=1)")
+          "'len' = sustain in beats (hold candidate if >=1), 'p' = dominant pitch (MIDI no., 60 = C4) for melody/bass")
     for beat in sorted(rows):
         parts = []
         for k in layers:
             if k in rows[beat]:
                 o = rows[beat][k]
                 extra = f" len{o['len_beats']}" if o.get("len_beats", 0) >= 0.75 else ""
+                if o.get("pitch") is not None:
+                    extra += f" p{o['pitch']}"
                 tri = " tri" if o["grid"] == "1/3" else ""
                 parts.append(f"{k}:{o['s']:.2f}{extra}{tri}")
         bar, inbar = divmod(beat, 4)

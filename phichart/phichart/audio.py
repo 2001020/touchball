@@ -256,6 +256,11 @@ def analyze(audio_path: str | Path, out_dir: str | Path, bpm: float | None = Non
             while f < limit and Hn[rows, f].sum() > 0.45 * peak:
                 f += 1
             o["len_beats"] = round(float((f - f0) * HOP / SR / period), 2)
+            # pitch: strongest bin in the fundamental range (vocals/lead 180-1100 Hz, bass 40-250 Hz)
+            plo, phi = (180, 1100) if k == "melody" else (lo, hi)
+            pb = np.where((freqs >= plo) & (freqs < phi))[0]
+            hz = float(freqs[pb[int(np.argmax(Hn[pb, f0 + 1:f0 + 4].mean(axis=1)))]])
+            o["pitch"] = int(round(69 + 12 * math.log2(hz / 440.0))) if hz > 0 else None
 
     # ---- energy per beat / bar
     rms = librosa.feature.rms(y=y, frame_length=2048, hop_length=HOP)[0][:n_fr]
