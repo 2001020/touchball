@@ -193,6 +193,14 @@
 
 ---
 
+### 3.5 噪域（blockAreaList）—— 禁止使用
+目标播放器是**官方 Phira**（TeamFlos/phira），它目前**不支持** Phigros 第九章引入的噪域机制
+（社区实现 TeamFlos/phira#901 尚未合并，且只针对官方格式谱面）。因此：
+* 不要写顶层 `blockAreaList`（会被 Phira 忽略；`phichart fmt/export` 会删掉它并警告）。
+* 不要用 `Texture` 为 `isSubtract0.png` / `isSubtract1.png` 的"噪域承载线"（Line2Area 约定）——官方 Phira 会把它当贴图线去加载图片，谱面直接加载失败；lint 会报错。
+* 判定线 `Texture` 一律保持 `"line.png"`。
+* 想表达"干扰/压迫"感，用合法手段：流速变化、判定线位移/旋转/透明度、从下方来的音符（above:0，少量）。
+
 ## 4. 工作流程（必须按顺序）
 
 ### 步骤 1：读分析

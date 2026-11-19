@@ -219,6 +219,12 @@ def normalize(chart: dict) -> tuple[dict, list[str], list[str]]:
         b["bpm"] = float(b.get("bpm", 120))
     c["BPMList"].sort(key=lambda b: triple_to_beat(b["startTime"]))
     c.setdefault("judgeLineGroup", ["Default"])
+    # Noise areas (噪域, Phigros blockAreaList) are NOT supported by official Phira (TeamFlos/phira):
+    # its RPE parser ignores the field, so it would silently do nothing. normalize() drops it.
+    for key in ("blockAreaList", "blockAreas", "noiseAreas"):
+        if key in c:
+            warnings.append(f"top-level '{key}' (噪域/noise areas) is ignored by official Phira; removed")
+            del c[key]
     lines = c.get("judgeLineList")
     if not lines:
         errors.append("judgeLineList is empty")
@@ -227,6 +233,12 @@ def normalize(chart: dict) -> tuple[dict, list[str], list[str]]:
         where = f"line {li}"
         line.setdefault("Name", f"line{li}")
         line.setdefault("Texture", "line.png")
+        tex = str(line.get("Texture"))
+        if tex.lower().startswith("issubtract"):
+            errors.append(f"{where}: Texture '{tex}' is a Line2Area noise-area (噪域) carrier line; official Phira has no "
+                          "noise areas and would try to load it as an image - remove this line")
+        elif tex != "line.png":
+            errors.append(f"{where}: Texture '{tex}' needs an image file that phichart does not package; use \"line.png\"")
         line.setdefault("father", -1)
         line.setdefault("isCover", 1)
         line.setdefault("zOrder", 0)
